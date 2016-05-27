@@ -1,0 +1,159 @@
+[ 2016-05-19T15:20:31+08:00 ] ::1 /activityTest/Home/index/styles/1/basic.css
+ERR: 非法操作:styles
+
+[ 2016-05-19T15:20:31+08:00 ] ::1 /activityTest/Home/index/styles/1/register.css
+ERR: 非法操作:styles
+
+[ 2016-05-19T15:20:31+08:00 ] ::1 /activityTest/Home/index/js/register.js
+ERR: 非法操作:js
+
+[ 2016-05-19T15:20:31+08:00 ] ::1 /activityTest/Home/index/js/code.js
+ERR: 非法操作:js
+
+[ 2016-05-19T15:39:36+08:00 ] ::1 /activityTest/Home/index/register.php?action=register
+ERR: 非法操作:register.php
+
+[ 2016-05-19T15:39:51+08:00 ] ::1 /activityTest/Home/index/register.php?action=register
+ERR: 非法操作:register.php
+
+[ 2016-05-19T15:40:08+08:00 ] ::1 /activityTest/Home/index/register.php?action=register
+ERR: 非法操作:register.php
+
+[ 2016-05-19T15:51:02+08:00 ] ::1 /activityTest/Home/index/styles/1/basic.css
+ERR: 非法操作:styles
+
+[ 2016-05-19T15:51:02+08:00 ] ::1 /activityTest/Home/index/styles/1/login.css
+ERR: 非法操作:styles
+
+[ 2016-05-19T15:51:03+08:00 ] ::1 /activityTest/Home/index/js/login.js
+ERR: 非法操作:js
+
+[ 2016-05-19T15:51:03+08:00 ] ::1 /activityTest/Home/index/js/code.js
+ERR: 非法操作:js
+
+[ 2016-05-19T15:51:03+08:00 ] ::1 /activityTest/Home/index/js/skin.js
+ERR: 非法操作:js
+
+[ 2016-05-19T16:01:30+08:00 ] ::1 /activityTest/Home/index/login.php?action=login
+ERR: 非法操作:login.php
+
+[ 2016-05-19T16:02:06+08:00 ] ::1 /activityTest/Home/index/auto
+ERR: Think\Controller:err方法不存在！
+
+[ 2016-05-19T17:00:27+08:00 ] ::1 /activityTest/index.php/Home/Index/__Public__/css/common.20160512_195352.min.css
+ERR: 非法操作:__Public__
+
+[ 2016-05-19T17:00:27+08:00 ] ::1 /activityTest/index.php/Home/Index/__Public__/css/detail.20160514_180809.min.css
+ERR: 非法操作:__Public__
+
+[ 2016-05-19T17:00:27+08:00 ] ::1 /activityTest/index.php/Home/Index/__Public__/css/jquery.mCustomScrollbar.css
+ERR: 非法操作:__Public__
+
+[ 2016-05-19T17:00:27+08:00 ] ::1 /activityTest/index.php/Home/Index/__Public__/js/jquery.min.js
+ERR: 非法操作:__Public__
+
+[ 2016-05-19T17:04:56+08:00 ] ::1 /activityTest/Home/index/__Public__/css/jquery.mCustomScrollbar.css
+ERR: 非法操作:__Public__
+
+[ 2016-05-19T17:04:56+08:00 ] ::1 /activityTest/Home/index/__Public__/css/detail.20160514_180809.min.css
+ERR: 非法操作:__Public__
+
+[ 2016-05-19T17:04:56+08:00 ] ::1 /activityTest/Home/index/__Public__/js/jquery.min.js
+ERR: 非法操作:__Public__
+
+[ 2016-05-19T17:04:56+08:00 ] ::1 /activityTest/Home/index/__Public__/css/common.20160512_195352.min.css
+ERR: 非法操作:__Public__
+
+[ 2016-05-19T17:15:06+08:00 ] ::1 /activityTest/index.php/Home/Index/__Public__/js/jquery.min.js
+ERR: 非法操作:__Public__
+
+[ 2016-05-19T17:15:06+08:00 ] ::1 /activityTest/index.php/Home/Index/__Public__/css/detail.20160514_180809.min.css
+ERR: 非法操作:__Public__
+
+[ 2016-05-19T17:15:06+08:00 ] ::1 /activityTest/index.php/Home/Index/__Public__/css/jquery.mCustomScrollbar.css
+ERR: 非法操作:__Public__
+
+[ 2016-05-19T17:15:06+08:00 ] ::1 /activityTest/index.php/Home/Index/__Public__/css/common.20160512_195352.min.css
+ERR: 非法操作:__Public__
+
+[ 2016-05-19T17:18:01+08:00 ] ::1 /activityTest/index.php/Home/Index/%7BU('Index/details')%7D?id=1
+ERR: 非法操作:{U('Index
+
+[ 2016-05-19T17:18:51+08:00 ] ::1 /activityTest/index.php/Home/Index/__Public__/css/detail.20160514_180809.min.css
+ERR: 非法操作:__Public__
+
+[ 2016-05-19T17:18:51+08:00 ] ::1 /activityTest/index.php/Home/Index/__Public__/css/jquery.mCustomScrollbar.css
+ERR: 非法操作:__Public__
+
+[ 2016-05-19T17:18:51+08:00 ] ::1 /activityTest/index.php/Home/Index/__Public__/css/common.20160512_195352.min.css
+ERR: 非法操作:__Public__
+
+[ 2016-05-19T17:18:51+08:00 ] ::1 /activityTest/index.php/Home/Index/__Public__/js/jquery.min.js
+ERR: 非法操作:__Public__
+
+[ 2016-05-19T17:19:12+08:00 ] ::1 /activityTest/index.php/Home/Index/__Public__/css/common.20160512_195352.min.css
+ERR: 非法操作:__Public__
+
+[ 2016-05-19T18:16:38+08:00 ] ::1 /activityTest/Home/Index/pcenter_css/common.20160517_112240.min.css
+ERR: 非法操作:pcenter_css
+
+[ 2016-05-19T18:16:38+08:00 ] ::1 /activityTest/Home/Index/pcenter_css/jquery.mCustomScrollbar.css
+ERR: 非法操作:pcenter_css
+
+[ 2016-05-19T18:16:38+08:00 ] ::1 /activityTest/Home/Index/pcenter_css/manage.20160517_112240.min.css
+ERR: 非法操作:pcenter_css
+
+[ 2016-05-19T18:16:38+08:00 ] ::1 /activityTest/Home/Index/pcenter_img/9sk5r1443013235955.jpg@!user-head
+ERR: 非法操作:pcenter_img
+
+[ 2016-05-19T18:16:38+08:00 ] ::1 /activityTest/Home/Index/pcenter_js/jquery-1.7.2.min.js
+ERR: 非法操作:pcenter_js
+
+[ 2016-05-19T18:16:38+08:00 ] ::1 /activityTest/Home/Index/pcenter_img/9sk5r1443013235955.jpg@!user-head
+ERR: 非法操作:pcenter_img
+
+[ 2016-05-19T18:17:14+08:00 ] ::1 /activityTest/Home/Index/pcenter_css/manage.20160517_112240.min.css
+ERR: 非法操作:pcenter_css
+
+[ 2016-05-19T18:17:14+08:00 ] ::1 /activityTest/Home/Index/pcenter_css/common.20160517_112240.min.css
+ERR: 非法操作:pcenter_css
+
+[ 2016-05-19T18:17:14+08:00 ] ::1 /activityTest/Home/Index/pcenter_css/jquery.mCustomScrollbar.css
+ERR: 非法操作:pcenter_css
+
+[ 2016-05-19T18:17:14+08:00 ] ::1 /activityTest/Home/Index/pcenter_img/9sk5r1443013235955.jpg@!user-head
+ERR: 非法操作:pcenter_img
+
+[ 2016-05-19T18:17:14+08:00 ] ::1 /activityTest/Home/Index/pcenter_js/jquery-1.7.2.min.js
+ERR: 非法操作:pcenter_js
+
+[ 2016-05-19T18:17:15+08:00 ] ::1 /activityTest/Home/Index/pcenter_img/9sk5r1443013235955.jpg@!user-head
+ERR: 非法操作:pcenter_img
+
+[ 2016-05-19T18:17:38+08:00 ] ::1 /activityTest/Home/Index/pcenter_img/9sk5r1443013235955.jpg@!user-head
+ERR: 非法操作:pcenter_img
+
+[ 2016-05-19T18:17:38+08:00 ] ::1 /activityTest/Home/Index/pcenter_img/9sk5r1443013235955.jpg@!user-head
+ERR: 非法操作:pcenter_img
+
+[ 2016-05-19T18:18:33+08:00 ] ::1 /activityTest/Home/Index/pcenter_img/9sk5r1443013235955.jpg@!user-head
+ERR: 非法操作:pcenter_img
+
+[ 2016-05-19T18:18:33+08:00 ] ::1 /activityTest/Home/Index/pcenter_img/9sk5r1443013235955.jpg@!user-head
+ERR: 非法操作:pcenter_img
+
+[ 2016-05-19T18:18:42+08:00 ] ::1 /activityTest/Home/pcenter_img/9sk5r1443013235955.jpg@!user-head
+ERR: 无法加载控制器:Pcenter_img
+
+[ 2016-05-19T18:18:43+08:00 ] ::1 /activityTest/Home/Index/pcenter_img/9sk5r1443013235955.jpg@!user-head
+ERR: 非法操作:pcenter_img
+
+[ 2016-05-19T18:32:02+08:00 ] ::1 /activityTest/Home/Index/userdata
+ERR: Think\Model:relation方法不存在！
+
+[ 2016-05-19T18:43:11+08:00 ] ::1 /activityTest/Home/Index/userdata
+ERR: XML标签语法错误 : name="<?php echo ($da["activitydatas"]); ?
+
+[ 2016-05-19T19:04:00+08:00 ] ::1 /activityTest/Home/Index/userdata
+ERR: Think\Model:relation方法不存在！
+

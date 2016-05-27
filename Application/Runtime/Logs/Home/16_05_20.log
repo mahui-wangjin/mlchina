@@ -1,0 +1,6 @@
+[ 2016-05-20T12:12:40+08:00 ] ::1 /activityTest/index.php/Home/Index/userrecord
+ERR: 非法数据对象！:[ar_person=>王晋]
+
+[ 2016-05-20T14:30:50+08:00 ] ::1 /activityTest/Home/index/post
+ERR: 模板不存在:./Application/Home/View/Index/post.html
+

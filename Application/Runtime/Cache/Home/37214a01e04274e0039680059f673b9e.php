@@ -1,0 +1,315 @@
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
+<html>
+<head>
+<title>活动详情页面</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="/activityTest/Public/css/common.20160512_195352.min.css">
+<link rel="stylesheet" href="/activityTest/Public/css/detail.20160514_180809.min.css">
+<link href="/activityTest/Public/css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css">
+<!-- endbuild -->
+<script src="/activityTest/Public/js/jquery.min.js"></script>
+<script>
+jQuery(document).ready(function($) {
+	$('.detail_t_join').click(function(){
+		$('.theme-popover-mask').fadeIn(100);
+		$('.theme-popover').slideDown(200);
+	})
+	$('.close').click(function(){
+		$('.theme-popover-mask').fadeOut(100);
+		$('.theme-popover').slideUp(200);
+	})
+})
+</script>
+
+<style>
+.theme-popover{
+	top:50%;
+	left:50%;
+	width:700px;
+	height:500px;
+	margin:-240px 0 0 -330px;
+	background-color:#6FF;
+	opacity:0.7;
+	z-index:9999;
+	position:fixed;
+	box-shadow: 0 0 10px #666;
+	display:none;
+	border-top-left-radius:20px;
+	border-top-right-radius:20px;
+	border-bottom-left-radius:20px;
+	border-bottom-right-radius:20px;
+
+}
+.theme-popover-mask {
+	z-index: 9998;
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background:#000;
+	opacity:0.4;
+	filter:alpha(opacity=40);
+	display:none;
+}
+.xinxi{
+	width:500px;
+	height:30px;
+	border:1px solid black;
+	margin-left:120px;
+	text-align:center;
+	margin-top:15px;
+	padding-top:10px;
+}
+.input_kuang{
+	background-color:#FFF;
+	border:2px solid black;
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+	border-bottom-right-radius:10px;
+	border-bottom-left-radius:10px;
+}
+.tij input:hover{
+	cursor:pointer;
+	background-color:red;
+	color:#fff;
+}
+.tij input{
+	background-color:#FFF;
+	width:60px;
+	height:30px;
+	font-size:15px;
+	margin-top:15px;border-top-left-radius:10px;
+	border-top-right-radius:10px;
+	border-bottom-right-radius:10px;
+	border-bottom-left-radius:10px;
+
+}
+</style>
+</head>
+
+<body>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="/activityTest/Public/styles/1/basic.css" />
+<link rel="stylesheet" type="text/css" href="/activityTest/Public/styles/1/login.css" />
+<script type="text/javascript" src="/activityTest/Public/js/code.js"></script>
+<script type="text/javascript" src="/activityTest/Public/js/login.js"></script>
+</head>
+<body>
+<script type="text/javascript" src="/activityTest/Public/js/skin.js"></script>
+<div id="header">
+	<ul>
+		<li><a href="#">首页</a></li>
+		<li><a href="register">注册</a></li>
+		<li><a href="userdata"><?php $username=session('username');if($username){echo $username.'的个人中心';}else{echo '登录';} ?></a></li>
+		<li><a href="#">退出</a></li>
+	</ul>
+</div>
+<div class="container">
+      <!--活动标题、头像、分享数-->
+      <?php if(is_array($data)): foreach($data as $key=>$da): ?><div class="detail_title">
+        <h1 class="detail_title_h1" id="dt_title"><?php echo ($da["ad_title"]); ?></h1>
+      </div>
+      <div class="detail_user hdMan">
+        <div class="hdman_r">
+          <div class="yhName"> <a target="_blank" href="#" class="subinfo_name" id="subinfo_name" ontouchstart="" style="max-width: 1061px;"><?php echo ($da["ad_author"]); ?></a>
+            <p class="fbTime"><?php echo ($da["ad_time"]); ?></p>
+          </div>
+          <div class="dt_review_item_count"> <a class="info_share" id="info_share" style="color: rgb(0, 153, 233);">分享 1102+</a><span id="info_hits">浏览数 <?php echo ($da["ad_readnum"]); ?></span> </div>
+        </div>
+      </div>
+
+      <!--时间、地址、报名数 start-->
+      <div class="detail_time_attr_join_top"></div>
+      <div class="detail_main_outside">
+        <div class="detail_time_attr_det_con">
+          <div class="detail_time_attr_join">
+            <div class="detail_time_attr_join_gray">
+              <div class="detail_Time">
+                <div class="detail_Time_t">
+                  <p> <?php echo ($da["ad_startime"]); ?> 至 <?php echo ($da["ad_stoptime"]); ?>
+                    &nbsp;</p>
+                </div>
+              </div>
+              <div class="detail_Attr"> <a href="#" target="_blank" class="dt_address_item" ontouchstart="#">
+                <div class="detail_Attr_K">
+                  <p class="addressP"><?php echo ($da["ad_adress"]); ?></p>
+                </div>
+                </a> </div>
+              <div class="detail_Joinnum" id="detail_Joinnum">
+                <div class="detail_Joinnum_t">
+                  <p>已有<span><?php echo ($da["ad_num"]); ?></span>人报名</p>
+                </div>
+                <div class="detail_Joinnum_b">
+                  <p>限制人数:<?php echo ($da["ad_maxnum"]); ?></p>
+                </div>
+              </div>
+              <div class="detail_party_xian"></div>
+              <div class="detail_join_ticket">
+                <div class="detail_join_ticket_con">
+                  <ul class="join clearfix">
+                    <li class="show">
+                      <div name="detail_t_join" class="detail_t_join"><a  href="#" class="theme-login">我要报名</a></div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+<!--报名页面开始-->
+<div class="theme-popover">
+	<div class="wanshanbaoming" style=" border-bottom:2px solid #6FF;">
+    	<p style="font-size:24px; position:fixed; margin-left:260px;">填写报名信息</p>
+        <a href="javascript:;" title="关闭" class="close" style="margin-left:650px; font-size:24px; color:#F00;">X</a>
+    </div>
+    <form action="userrecord" method="post">
+    <input type="hidden" name="id" value="<?php echo ($_GET['id']); ?>"/>
+    <div class="xinxi">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;姓名：<input type="text" placeholder="报名信息" class="input_kuang"  name="name"/></div>
+    <div class="xinxi">联系方式：<input type="text" placeholder="报名信息" class="input_kuang"  name='tel'/></div>
+    <div class="xinxi">联系地址：<input type="text" placeholder="报名信息" class="input_kuang" name="adress"/></div>
+    <div class="xinxi">QQ：<input type="text" placeholder="报名信息" class="input_kuang"  name="qq"/></div>
+     <div class="tij"><input type="submit" value="报名"  class="bm"/></div>
+    </form>
+</div>
+<div class="theme-popover-mask"></div>
+
+
+<!--报名页面结束-->
+
+          <!--时间、地址、报名数 end-->
+          <!--活动详情-->
+          <div class="dt_content_top"></div>
+          <div id="dt_content" class="dt_content">
+          <?php echo ($da["ad_content"]); ?>
+          <!--
+          <span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;"><br>
+            </span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;">
+            <div class="dt_content_pic"><img src="#" style="display: inline;"></div>
+            </span><span style="font-weight: bold;font-size: 16px;color: #C10000;text-decoration:none;">此次大会沈阳米库创服组织的，围绕创业生态邀请众多一线创投圈明星，最有思想力的创业者、优质创业服务机构、聪明的FA团队、疯狂的创业媒体、公关领域牛人齐聚沈阳，一起探讨新型商业与转型变革，分享是主流创业思维与投资理念。</span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;"><br>
+            </span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;"><br>
+            </span><span style="font-weight: bold;font-size: 16px;color: #408080;text-decoration:none;">大会主</span><span style="font-weight: bold;font-size: 16px;color: #408080;text-decoration:none;">题</span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;"><br>
+            </span><span style="font-weight: normal;font-size: 16px;color: #808080;text-decoration:none;">分享 &nbsp;</span><span style="font-weight: normal;font-size: 16px;color: #808080;text-decoration:none;">启发 &nbsp;</span><span style="font-weight: normal;font-size: 16px;color: #808080;text-decoration:none;">连结</span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;"><br>
+            </span><span style="font-weight: bold;font-size: 16px;color: #408080;text-decoration:none;">大会时间</span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;"><br>
+            </span><span style="font-weight: normal;font-size: 16px;color: #808080;text-decoration:none;">5月18日13：00-18：00，</span><span style="font-weight: bold;font-size: 16px;color: #C10000;text-decoration:none;">签到时间：12：30</span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;"><br>
+            </span><span style="font-weight: bold;font-size: 16px;color: #408080;text-decoration:none;">大会地点</span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;"><br>
+            </span><span style="font-weight: bold;font-size: 16px;color: #C10000;text-decoration:none;">沈阳市沈河区中街·豫珑城3楼豫珑剧场</span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;"><br>
+            </span><span style="font-weight: bold;font-size: 16px;color: #408080;text-decoration:none;">与会人员</span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;"><br>
+            </span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;">1、10位政府相关领导</span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;"><br>
+            </span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;">2、55位众创空间负责人</span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;"><br>
+            </span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;">3、10位一线创投圈明星</span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;"><br>
+            </span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;">4、100位商学院学员</span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;"><br>
+            </span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;">5、80位特邀企业家</span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;"><br>
+            </span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;">6、200位初创企业</span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;"><br>
+            </span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;">7、20家媒体朋友</span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;"><br>
+            </span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;">8、其他报名人员</span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;"><br>
+            </span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;"><br>
+            </span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;"><br>
+            </span><span style="font-weight: bold;font-size: 18px;color: #C10000;text-decoration:none;">报名方式：</span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;"><br>
+            </span>
+            <span style="font-weight: bold;font-size: 16px;color: #C10000;text-decoration:none;">第一步，</span><span style="font-weight: bold;font-size: 16px;color: #000000;text-decoration:none;">平台点击报名，填写资料后提交报名。</span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;"><br>
+            </span>
+          	<span style="font-weight: bold;font-size: 18px;color: #000000;text-decoration:none;">大会现场布局</span>
+            <span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;"><br></span>
+            <span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;">
+            <div class="dt_content_pic"><img src="#" style="display: inline;"></div></span>
+            <span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;"><br></span>
+            <span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;">
+            <div class="dt_content_pic"><img src="#" style="display: inline;"></div></span>
+<span style="font-weight: normal;font-size: 18px;color: #C10000;text-decoration:none;">第一步，用户在“互动吧”平台点击报名，填写资料后提交报名【并保存报名凭证】。</span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;"><br>
+            </span><span style="font-weight: normal;font-size: 18px;color: #C10000;text-decoration:none;">第二步，主办方审核后，您将接到“报名成功”的短信提醒，并根据提醒进行在线选座，大会现场对号入座。</span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;"><br>
+            </span><span style="font-weight: normal;font-size: 16px;color: #808080;text-decoration:none;">注：参与此次大会是【免费的】，但不是公益的，希望所有报名的朋友都能够尊重我们的劳动，为了提供高质量的内容，让大家和更优质的人群进行交流，报名后工作人员将在3个小时内进行身份审核，如未通过审核将收到拒绝报名短信提醒</span><span style="font-weight: normal;font-size: 16px;color: #808080;text-decoration:none;">。</span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;"><br>
+            </span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;"><br>
+            </span><span style="font-weight: bold;font-size: 18px;color: #408080;text-decoration:none;">参会注意事项：</span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;"><br>
+            </span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;">01.请保存好互动吧报名凭证，使用这个凭证方可在线选座</span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;">。</span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;"><br>
+            </span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;">02.</span><span style="font-weight: bold;font-size: 16px;color: #C10000;text-decoration:none;">【每张电子门票仅限一人，</span><span style="font-weight: bold;font-size: 16px;color: #C10000;text-decoration:none;">且对号入座</span><span style="font-weight: bold;font-size: 16px;color: #C10000;text-decoration:none;">】</span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;">，请您自觉遵守现场秩序。</span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;"><br>
+            </span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;">03.现场可以录像、录音、拍照分享，但请您关闭闪光灯以免影响其他观众，感谢您的配合。</span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;"><br>
+            </span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;">04.现场禁止1.2米以下儿童入内。</span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;"><br>
+            </span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;">05.现场禁止携带宠物入内。</span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;"><br>
+            </span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;">06.由于场地规定要求，严禁携带易燃易爆危险品入场，请勿外带食品入场。场馆全场禁烟。</span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;"><br>
+            </span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;">07.现场未设置储物服务，请自行保管好您的私人物品，敬请谅解。</span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;"><br>
+            </span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;">08.合作电话：15504042505</span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;"><br>
+            </span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;"><br>
+            </span><span style="font-weight: bold;font-size: 18px;color: #408080;text-decoration:none;">常见问题</span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;"><br>
+            </span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;">01. 我该怎么去中街·豫珑城？</span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;"><br>
+            </span><span style="font-weight: normal;font-size: 14px;color: #808080;text-decoration:none;">&nbsp; 公交：小北门站</span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;"><br>
+            </span><span style="font-weight: normal;font-size: 14px;color: #808080;text-decoration:none;">&nbsp; 地铁：中街站B2出口，西行300米</span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;"><br>
+            </span><span style="font-weight: normal;font-size: 14px;color: #808080;text-decoration:none;">&nbsp; 自驾：北顺城路南侧，小北门附近，免费停车。</span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;"><br>
+            </span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;">02.现场是对号入座么？</span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;"><br>
+            </span><span style="font-weight: normal;font-size: 14px;color: #808080;text-decoration:none;">&nbsp; 是的。</span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;"><br>
+            </span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;">03.报名后怎么选座位？</span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;"><br>
+            </span><span style="font-weight: normal;font-size: 14px;color: #000000;text-decoration:none;">报名成功后会有，短信提醒，请按短息提醒操作。</span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;"><br>
+            </span><span style="font-weight: normal;font-size: 14px;color: #000000;text-decoration:none;">合作电话：15504042505</span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;"><br>
+            </span><span style="font-weight: normal;font-size: 16px;color: #000000;text-decoration:none;"><br>
+            </span>
+
+-->
+          <!--报名列表 -->
+          </div><?php endforeach; endif; ?>
+          <a name="a_join_list"></a>
+          <div class="dt_join_menu_bg" id="dt_join_menu_bg">
+            <div ontouchstart="" class="dt_join_top">
+              <p id="dt_join_count" class="dt_join_topL"><span id="join_total">694</span>人已完成报名</p>
+              <a id="dt_list_title_manage" ontouchstart="#" href="#">管理报名信息</a> </div>
+            <ul style="" class="dt_list_main" id="dt_list_main">
+              <li id="div_join_id_f8nw3" class="dt_review_main">
+                <div class="dt_review_K">
+                  <div class="dt_guess_item_icon"><a target="_blank" href="#"><img class="default_img" src="" onerror="this.src=''"></a></div>
+                  <div class="dt_guess_item_title dt_loadNew"><a target="_blank" href="#">大卫</a></div>
+                  <p class="dt_guess_item_time">4小时前</p>
+                </div>
+              </li>
+
+              <li id="div_join_id_s82w3" class="dt_review_main">
+                <div class="dt_review_K">
+                  <div class="dt_guess_item_icon"><a target="_blank" href=""><img class="default_img" src="" onerror="this.src=''"></a></div>
+                  <div class="dt_guess_item_title dt_loadNew"><a target="_blank" href="">刘晶晶</a></div>
+                  <p class="dt_guess_item_time">4小时前</p>
+                </div>
+              </li>
+
+            </ul>
+            <div class="dt_join_more" id="join_loading" style="display: block;"><a class="moreBtn font03"><span>展开更多报名</span></a></div>
+          </div>
+
+          <!--QQ群-->
+          <!--评论-->
+          <!--精选活动-->
+
+        </div>
+        <!--右侧边栏-->
+        <div id="detail_r_pc" style="visibility: visible;">
+          <div class="detail_time_attr_det_aside">
+            <div class="detail_r_pc_Up">
+              <div class="detail_party_aside_topR">
+                <p class="aside_topR_pic"><a href="#" target="_blank"><img src=""></a> </p>
+                <p class="aside_topR_tit"><a href="#" target="_blank"><span id="detail_shop_name">米库创服</span></a></p>
+                <p class="aside_topR_con" id="detail_shop_desc">为创业人群提供创业活动和创业孵化服务，致力于用前沿的视角和专业的服务，捕捉和精炼未来的企业家。</p>
+              </div>
+              <div class="party_join">
+                <div class="l">活动
+                  <p class="num" id="detail_post_count">3</p>
+                </div>
+                <div class="r">参与者
+                  <p class="num" id="detail_join_count">1059</p>
+                </div>
+                <div class="xx"></div>
+              </div>
+            </div>
+            <div class="her_party">
+              <div class="her_party_tit">
+                <p>TA的活动</p>
+              </div>
+              <ul class="her_party_con">
+                <li id="hisParty1"><a href="#"><b></b><span>大学生“创意葩”寻找最牛导师团</span></a></li>
+                <li id="hisParty2"><a href="#"><b></b><span>创业者的6km迷你马拉松开始报名咯【科技周·沈阳众创空间联盟系列活动】</span></a></li>
+                <li id="hisParty3"><a href="#"><b></b><span>最后40个席位·米库F5创业生态大会创投明星FA众创空间媒体政府创业者齐聚</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+</body>
+</html>

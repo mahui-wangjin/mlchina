@@ -1,0 +1,16 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/styles/1/basic.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/styles/1/login.css" />
+<script type="text/javascript" src="__PUBLIC__/js/code.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/login.js"></script>
+</head>
+<body>
+<script type="text/javascript" src="__PUBLIC__/js/skin.js"></script>
+<div id="header">
+	<ul>
+		<li><a href="#">首页</a></li>
+		<li><a href="register">注册</a></li>
+		<li><a href="userdata"><php>$username=cookie('username');if($username){echo $username.'的个人中心';}else{echo '登录';}</php></a></li>
+		<li><a href="#">退出</a></li>
+	</ul>
+</div>
